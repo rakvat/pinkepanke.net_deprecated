@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>Hausprojekt PinkePanke</title>
+    <link rel="stylesheet" href="<%= @items['/stylesheet/'].path %>">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+    <meta name="Title" content="Hausprojekt PinkePanke">
+    <meta name="Author" content="Hausprojekt PinkePanke">
+    <meta name="Description" content="Informationen und Neuigkeiten zum Hausprojekt PinkePanke in Berlin-Wedding">
+    <meta name="Revisit" content="After 15 days">
+    <meta name="Keywords" content="Hausprojekt, Mietsh&auml;user Syndikat, Direktkredite, Berlin, Wedding, Kolonisten, &auml;ltestes Haus, solidarisches Zusammenleben">
+    <meta name="Robots" content="INDEX,FOLLOW">
+    <meta name="content-language" content="de">
+    <link rel="icon" type="image/icon" href="/favicon.ico">
+  </head>
+  <body text="#FFFFFF" bgcolor="#000000" onLoad="if (self != top) top.location = self.location">
+  
+    <a name="top"></a>
+    <center>
+      <div class="container">
+      
+      <div class="leftplaceholder"></div>
+      <div class="textwindow">
+        <%= yield %>
+      </div> <!--textwindow-->
+
+      <div class="categories">
+        <% nav_map = { aktuelles: "Aktuelles",
+                       denkmal: "Geschichte und Denkmal",
+                       haus: "Häuser",
+                       projekt: "Projekt",
+                       finanzierung: "Finanzierung",
+                       kontakt: "Kontakt" } %>
+        <% nav_map.each do |id, word| %>
+          <% c = @item[:id] == id.to_s ? "class=\"active\"" : "" %>
+          <%= "<a #{c} href=\"/#{id}\">#{word}</a>" %>
+        <% end %>
+      </div>
+
+      <div class="title"><a href="/" class="none"><img src="/images/title.png" border="0" alt="Hausprojekt PinkePanke" /></a></div>
+
+      <div class="lefttree"><img src="/images/left_tree.png" border="0" alt="baum" /></div>
+      <div class="righttree"><img src="/images/right_tree.png" border="0" alt="baum" /></div>
+
+
+      <div class="clear"></div>
+      </div> <!-- /container -->
+    </center>
+
+    <div class="impressum">
+      <br/>
+      <br/>
+      <a rel="license" href="http://creativecommons.org/licenses/by/3.0/de/" target="_blank">
+      <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/de/88x31.png" /></a>
+      <a href="kontakt.php">     impressum</a>
+    </div>
+  </body>
+</html>
+

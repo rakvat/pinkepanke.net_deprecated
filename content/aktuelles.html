@@ -1,0 +1,22 @@
+---
+title: Aktuelles
+id: aktuelles
+---
+<h4>Aktuelles&nbsp;
+<% @config[:years].each do |y| %>
+  <b><a href="/aktuelles/<%=y%>"><%=y%></a></b>&nbsp;
+<% end %>
+</h4>
+
+<% @config[:news].slice(0..2).each do |i| %>
+  <%= render "news_item", item: i %>
+<% end %>
+
+<br/>
+<br/>
+
+Mehr Neuigkeiten aus den Jahren<br/>
+
+<% @config[:years].each do |y| %>
+  <b><a href="/aktuelles/<%=y%>"><%=y%></a></b>&nbsp;
+<% end %>
