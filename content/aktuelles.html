@@ -8,7 +8,7 @@ id: aktuelles
 <% end %>
 </h4>
 
-<% @config[:news].slice(0..2).each do |i| %>
+<% @config[:news].slice(0..5).each do |i| %>
   <%= render "news_item", item: i %>
 <% end %>
 
