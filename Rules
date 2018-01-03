@@ -22,8 +22,8 @@ preprocess do
   def generate_years
     @years = @news.map { |n| n[:date].year }.uniq
     @years.each do |y|
-      @items << Nanoc::Item.new("<%= render 'jahr', year: #{y} %>", 
-                                { title: "Jahr #{y}", id: "aktuelles" }, 
+      @items << Nanoc::Item.new("<%= render 'jahr', year: #{y} %>",
+                                { title: "Jahr #{y}", id: "aktuelles" },
                                 "/aktuelles/#{y}/")
     end
     @config[:years] = @years
@@ -32,7 +32,7 @@ preprocess do
   set_news
   generate_years
 end
-          
+
 compile '*' do
   if item[:extension] == 'css'
     filter :relativize_paths, type: :css
