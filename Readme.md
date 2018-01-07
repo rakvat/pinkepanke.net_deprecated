@@ -1,3 +1,5 @@
+# Wepage source for http://pinkepanke.net
+
 This site is build with http://nanoc.ws/
 
 you need ruby and bundler (e.g. with rvm)
