@@ -1,4 +1,8 @@
-# Wepage source for http://pinkepanke.net
+# Deprecated
+
+switched to https://github.com/rakvat/pinkepanke.net now
+
+## Wepage source for http://pinkepanke.net
 
 This site is build with http://nanoc.ws/
 
